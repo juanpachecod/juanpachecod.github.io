@@ -223,6 +223,45 @@ body{
     bottom: 0;
     opacity: 1;
 }
+.porfolio .fila {
+    flex-wrap: wrap; /* Permitir múltiples filas */
+    justify-content: center; /* Centrar elementos */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+.porfolio .fila .col {
+    flex: 0 0 calc(33.33% - 20px); /* 3 columnas por fila */
+    box-sizing: border-box;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding-bottom: 60px; /* Espacio para el botón oculto */
+}
+
+/* Responsivo: 2 columnas en tablets */
+@media (max-width: 1024px) {
+  .porfolio .fila .col {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+/* Responsivo: 1 columna en celulares */
+@media (max-width: 600px) {
+  .porfolio .fila .col {
+    flex: 0 0 100%;
+  }
+}
+.porfolio .fila .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 280px; /* ajusta este valor si necesitas más espacio */
+  padding: 15px;
+  padding-bottom: 60px;
+}
+
+
+
 /* SECCION BLOG */
 .blog .fila{
     display: flex;
