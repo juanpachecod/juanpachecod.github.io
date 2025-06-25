@@ -255,7 +255,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 280px; /* ajusta este valor si necesitas más espacio */
+  height: 380px; /* ajusta este valor si necesitas más espacio */
   padding: 15px;
   padding-bottom: 60px;
 }
