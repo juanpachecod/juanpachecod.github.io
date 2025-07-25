@@ -262,57 +262,105 @@ body{
 
 
 
-/* SECCION BLOG */
-.blog .fila{
+/* SECCIÓN BLOG */
+.blog .fila {
     display: flex;
+    flex-wrap: wrap;
+    background-color: #f9fafb; /* Fondo claro */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 40px;
 }
+
 .blog .fila img {
-    width: 80%;
-    height: 30; 
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
-.blog .fila .col{
+
+.blog .fila .col {
     padding: 50px;
     position: relative;
+    flex: 1 1 300px;
+    color: #1f2937; /* Texto oscuro */
 }
-.blog .fila .col header{
+
+.blog .fila .col header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 7px;
 }
-.blog .fila .col header .fecha{
-    background-color: #383838;
+
+.blog .fila .col header .fecha {
+    background-color: #1e3a8a; /* Azul oscuro */
     color: #fff;
-    padding: 2px 7px;
+    padding: 2px 10px;
     font-size: 14px;
+    border-radius: 4px;
 }
-.blog .fila .col p{
+
+.blog .fila .col p {
     font-style: italic;
 }
-.purple{
-    background-color: #54c2dd;
+
+/* Temas de fondo por artículo */
+.purple {
+    background-color: #efefef; 
 }
-.green{
-    background-color: #b4ffc9
+
+.green {
+    background-color: #efefef;
 }
-.blog .fila .col .btn-leer{
+
+/* Botón Leer Más */
+.blog .fila .col .btn-leer {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #38bdf8; /* Azul cielo */
     display: block;
     width: 200px;
     text-decoration: none;
-    color: #383838;
+    color: #0065f2;
     text-align: center;
-    padding: 7px;
+    padding: 10px;
     font-size: 16px;
-    transition: .3s;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    font-weight: 600;
 }
-.blog .fila .col .btn-leer:hover{
-    background-color: #7550bf;
+
+.blog .fila .col .btn-leer:hover {
+    background-color: #7c3aed; /* Morado vibrante */
     color: #fff;
 }
+
+/* MEDIA QUERY PARA MÓVILES */
+@media (max-width: 768px) {
+    .blog .fila {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog .fila img {
+        width: 100%;
+    }
+
+    .blog .fila .col {
+        padding: 25px;
+    }
+
+    .blog .fila .col .btn-leer {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+
+
 /* SECCION CONSULTA */
 .contacto .fila{
     background-color: #383838;
